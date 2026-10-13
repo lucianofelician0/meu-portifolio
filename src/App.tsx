@@ -1,12 +1,9 @@
-import { NavBar } from '@/components/navbar/NavBar';
+import {Home} from "@/components/pages/Home";
 function App() {
   return (
-    <div >
-      <NavBar />
-      <h1>My App</h1>
+    <div>
+      <Home />
     </div>
-  
-    
   );
 }
 
