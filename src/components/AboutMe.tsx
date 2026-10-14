@@ -1,12 +1,14 @@
-import {Titlies} from './ui/Titlies'
-import{navItems} from '@/data'
+import { Titlies } from "./ui/Titlies";
+import { navItems } from "@/data";
 export default function AboutMe() {
+
+  let   [ ,,,AboutMe] = navItems
   return (
     <section className="w-full md:w-[70%] mx-auto">
       <div className="">
         <div className=" p-8">
-          <Titlies info={navItems} />
-        
+          <Titlies info={AboutMe} />
+
           <p className="text-left mt-3 font-light text-lg p-4 ">
             I’m Luciano, a full-stack developer passionate about building
             end-to-end digital experiences that are fast, scalable and

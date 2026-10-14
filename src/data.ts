@@ -1,2 +1,2 @@
 
-export const navItems = ['Projects', 'Skills', 'Experience', 'About'];
+export const navItems: string[] = ['Projects', 'Skills', 'Experience', 'About me', 'Contact'];
