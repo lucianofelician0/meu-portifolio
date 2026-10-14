@@ -1,12 +1,13 @@
-import React from 'react';
+import React from 'react'
+import { navItems } from '@/data'
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = React.useState(false)
-    const navItems = ['Projects', 'Skills', 'Experience', 'About'];
+   
 
     return (
         <>
             <nav className="bg-white px-6 md:px-12 lg:px-24 xl:px-40 py-4 flex items-center justify-between relative">
-                <a className='text-3xl font-bold' href="https://prebuiltui.com">
+                <a className='text-3xl font-honk font-bold' href="https://prebuiltui.com">
                 Fluciano<span className="text-red-600">.</span>
                 </a>
 

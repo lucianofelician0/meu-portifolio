@@ -3,17 +3,16 @@ import { Avatar } from "./Avatar";
 export default function HeroSection() {
   return (
     <section className="h-full">
-      <div className="flex flex-col items-center h-screen">
+      <div className="flex flex-col items-center">
         <div className="p-4">
           <Avatar />
         </div>
-        <div className="border-2 ">
-          <h1 className="font-poppins  leading-tight">
-            Hi, I'm <span className="">Luciano</span> a passionate{" "}
-            <span className="text-red-950">Front-End Developer</span> with a
+        <div className=" p-5 max-w-xl mx-auto">
+          <h1 className="font-poppins  text-2xl text-center pb-4 px-4 leading-tight">
+             I'm <span className="text-green-900 font-bold">Luciano</span> a Full Stack Developer with a
             love for creating beautiful and functional web experiences.
           </h1>
-          <div className="">
+          <div className="p-2.5 flex justify-center   gap-4 mx-auto w-full ">
             <button className="bg-zinc-900 hover:bg-zinc-800 text-white px-6 py-2.5 rounded-sm text-sm transition cursor-pointer group">
               <div className="relative overflow-hidden">
                 <span className="block transition-transform duration-200 group-hover:-translate-y-full">
@@ -30,6 +29,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <hr className="border-zinc-200" />
     </section>
   );
 }

@@ -1,23 +1,23 @@
+import {Titlies} from './ui/Titlies'
+import{navItems} from '@/data'
 export default function AboutMe() {
   return (
-    <section id="AboutMe" className="about--section">
-      <div className="about--section--img">
-        <img src="./img/about-me.png" alt="About Me" />
-      </div>
-      <div className="hero--section--content--box about--section--box">
-        <div className="hero--section--content">
-          <p className="section--title">About</p>
-          <h1 className="skills-section--heading">About Me</h1>
-          <p className="hero--section-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-            officiis sit debitis omnis harum sed veniam quasi dicta accusamus
-            recusandae? Voluptatem, reprehenderit alias? Eligendi aperiam
-            tempora numquam sint odit optio.
+    <section className="w-full md:w-[70%] mx-auto">
+      <div className="">
+        <div className=" p-8">
+          <Titlies info={navItems} />
+        
+          <p className="text-left mt-3 font-light text-lg p-4 ">
+            I’m Luciano, a full-stack developer passionate about building
+            end-to-end digital experiences that are fast, scalable and
+            user-focused. With strong expertise in both front-end and back-end
+            technologies, I enjoy transforming ideas into fully functional web
+            applications that feel seamless and intuitive.
           </p>
-          <p className="hero--section-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-            officiis sit debitis omnis harum sed veniam quasi dicta accusamus
-            recusandae?
+          <p className="text-left font-light text-lg p-4">
+            Whether it’s crafting responsive interfaces or developing robust
+            backend systems, I aim to deliver solutions that are both reliable
+            and impactful.
           </p>
         </div>
       </div>
