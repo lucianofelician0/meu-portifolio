@@ -5,8 +5,8 @@ import fireBase from "@/assets/icons/firebase.png";
 import mongoDB from "@/assets/icons/mongodb.png";
 
 let toolsIcons = [
-  { name: "Git", icon: gitIcon },
   { name: "VS Code", icon: vscodeIcon },
+  { name: "Git", icon: gitIcon },
   { name: "Figma", icon: figmaIcon },
   { name: "Firebase", icon: fireBase },
   { name: "MongoDB", icon: mongoDB },

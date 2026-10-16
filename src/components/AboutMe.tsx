@@ -1,5 +1,6 @@
 import { Titlies } from "./ui/Titlies";
 import { navItems } from "@/data";
+
 export default function AboutMe() {
 
   let   [ ,,,AboutMe] = navItems
