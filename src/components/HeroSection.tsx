@@ -1,11 +1,12 @@
-import { Avatar } from "./Avatar";
+import { Avatar } from "./ui/Avatar";
+import avatarImg from "@/assets/img/foto.jpg"
 
 export default function HeroSection() {
   return (
     <section className="h-full">
       <div className="flex flex-col items-center">
         <div className="p-4">
-          <Avatar />
+          <Avatar img={avatarImg} />
         </div>
         <div className=" p-5 max-w-xl mx-auto">
           <h1 className="font-poppins  text-2xl text-center pb-4 px-4 leading-tight">

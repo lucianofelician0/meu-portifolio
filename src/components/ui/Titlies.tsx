@@ -3,9 +3,8 @@ interface TitliesProps {
 }
 
 export const Titlies = ({ info }: TitliesProps) => {
-
   return (
-    <h1 className="pseudo  relative  z-1 font-honk text-amber-800 font-extralight text-4xl text-center ">
+    <h1 className="font-honk font-bold md:font-extralight  text-4xl text-center">
       {info}
     </h1>
   );

@@ -5,12 +5,12 @@ export default function AboutMe() {
 
   let   [ ,,,AboutMe] = navItems
   return (
-    <section className="w-full md:w-[70%] mx-auto">
-      <div className="">
-        <div className=" p-8">
+    <section className="w-full md:w-[70%] mx-auto  ">
+      <div className="border rounded-lg border-gray-300 m-4 ">
+        <div className=" p-4 md:p-8">
           <Titlies info={AboutMe} />
 
-          <p className="text-left mt-3 font-light text-lg p-4 ">
+          <p className="text-left mt-4 font-light text-lg p-4 ">
             I’m a full-stack developer passionate about building
             end-to-end digital experiences that are fast, scalable and
             user-focused. With strong expertise in both front-end and back-end

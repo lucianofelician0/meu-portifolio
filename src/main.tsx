@@ -10,6 +10,10 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+   path:"/sobre",
+   element: <p>This is about page!</p>
+  },
+  {
     path: "*",
     element: <h1>Not Found</h1>,
   }

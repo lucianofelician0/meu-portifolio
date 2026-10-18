@@ -1,10 +1,9 @@
 import { Titlies } from "./ui/Titlies";
 import { navItems } from "@/data";
 import webIcon from "@/assets/icons/web-icon.png";
-import mobileIcon from "@/assets/icons/mobile-icon.png"
-import uiIcon from "@/assets/icons/ui-icon.png"
-import graphicIcon from "@/assets/icons/graphics-icon.png"
-import {MyTools} from "./MyTools";
+import mobileIcon from "@/assets/icons/mobile-icon.png";
+import uiIcon from "@/assets/icons/ui-icon.png";
+import graphicIcon from "@/assets/icons/graphics-icon.png";
 
 export default function MySkills() {
   let [, Skills] = navItems;
@@ -29,26 +28,24 @@ export default function MySkills() {
     },
     {
       name: "Graphics design",
-      icon:graphicIcon,
+      icon: graphicIcon,
       description: "Web development is the process of building, programming...",
       link: "#",
     },
   ];
   return (
-    <section className="w-full md:w-[70%] mx-auto">
+    <section className="w-full  md:w-[70%] mx-auto">
       <Titlies info={Skills} />
-      <div id="services" className="w-full  py-10 scroll-mt-20">
-        <div className="grid grid-cols-4 gap-4 my-10">
-          {services.map((service) => (
+      <div className="  mt-3  mx-4">
+        <div className="grid   items-center md:grid-cols-4 gap-4 my-8">
+          {services.map((service, index) => (
             <div
-              key={service.name}
-              className="border border-gray-300  dark:border-white/30 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white"
+              key={index}
+              className="border rounded-lg border-gray-300 p-6 mx-1 dark:border-white/30  hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white"
             >
               <img src={service.icon} alt="" className="w-10" />
-              <h3 className="text-lg my-4 text-gray-700 dark:text-white">
-                {service.name}
-              </h3>
-              <p className="text-sm text-gray-600 leading-5 dark:text-white/80">
+              <h3 className="py-2 font-medium text-left">{service.name}</h3>
+              <p className="text-sm font-extralight pb-2">
                 {service.description}
               </p>
               <a
@@ -58,10 +55,11 @@ export default function MySkills() {
                 Read more{" "}
                 <img src="./assets/right-arrow.png" alt="" className="w-4" />
               </a>
+              <hr className="py-2" />
             </div>
+          
           ))}
         </div>
-        <MyTools />
       </div>
     </section>
   );

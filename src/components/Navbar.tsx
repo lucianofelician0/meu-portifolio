@@ -5,7 +5,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white px-6 md:px-12 lg:px-24 xl:px-40 py-4 flex items-center justify-between relative">
+      <nav className="fixed bg-white/20 backdrop-blur-md border border-white/20 shadow-2xs px-6 md:px-12 lg:px-24 xl:px-40 py-4 flex items-center justify-between  right-0 left-0 z-100 ">
         <a
           className="text-3xl font-honk font-bold"
           href="https://prebuiltui.com"
@@ -62,17 +62,17 @@ export const Navbar = () => {
         </button>
 
         {menuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white border-t border-zinc-200 flex flex-col p-5 gap-1 md:hidden z-50">
+          <div className="absolute top-full  bg-amber-500 left-0 w-full flex flex-col p-6 gap-1 md:hidden z-50">
             {navItems.map((item) => (
               <a
                 key={item}
                 href="#"
-                className={`px-4 py-2.5 rounded-lg text-sm ${item === "Projects" ? "bg-zinc-50 font-medium text-zinc-800" : "text-zinc-500 hover:bg-zinc-50"}`}
+                className={`px-4 py-2.5  rounded-lg text-sm ${item === "Projects" ? "bg-zinc-50 font-medium text-zinc-800" : "text-black hover:bg-zinc-50"}`}
               >
                 {item}
               </a>
             ))}
-            <button className="flex items-center justify-center gap-2.5 bg-linear-to-r from-zinc-950 to-zinc-500 text-zinc-50 text-sm font-medium px-5 py-2.5 rounded-full cursor-pointer border-0 mt-3 w-fit">
+            <button className="flex items-center w-full justify-center gap-2.5 bg-linear-to-r from-zinc-950 to-zinc-500 text-zinc-50 text-sm font-medium px-5 py-2.5 rounded-full cursor-pointer border-0 mt-3 ">
               Get in touch
               <span className="size-7 rounded-full bg-white flex items-center justify-center">
                 <svg
