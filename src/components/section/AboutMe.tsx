@@ -1,14 +1,14 @@
-import { Titlies } from "./ui/Titlies";
+import { Titlies } from "@/components/ui/Titlies";
 import { navItems } from "@/data";
 
 export default function AboutMe() {
 
-  let   [ ,,,AboutMe] = navItems
+ const [ , , , { name } ] = navItems
   return (
-    <section className="w-full md:w-[70%] mx-auto  ">
-      <div className="border rounded-lg border-gray-300 m-4 ">
+    <section id="about" className="w-full md:w-[70%] mx-auto  ">
+      <div className="border rounded-lg border-gray-300 mb-5 ">
         <div className=" p-4 md:p-8">
-          <Titlies info={AboutMe} />
+          <Titlies info={name} />
 
           <p className="text-left mt-4 font-light text-lg p-4 ">
             I’m a full-stack developer passionate about building

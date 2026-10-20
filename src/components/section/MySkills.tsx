@@ -1,5 +1,5 @@
-import { Titlies } from "./ui/Titlies";
-import { navItems } from "@/data";
+import { Titlies } from "@/components/ui/Titlies";
+import  {navItems}  from "@/data"
 import webIcon from "@/assets/icons/web-icon.png";
 import mobileIcon from "@/assets/icons/mobile-icon.png";
 import uiIcon from "@/assets/icons/ui-icon.png";
@@ -34,8 +34,8 @@ export default function MySkills() {
     },
   ];
   return (
-    <section className="w-full  md:w-[70%] mx-auto">
-      <Titlies info={Skills} />
+    <section id="skills" className="w-full  md:w-[70%] mx-auto">
+      <Titlies info={Skills.name} />
       <div className="  mt-3  mx-4">
         <div className="grid   items-center md:grid-cols-4 gap-4 my-8">
           {services.map((service, index) => (

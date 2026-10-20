@@ -1,6 +1,17 @@
 import experienceIcon from "@/assets/icons/checkmark.png"
 
-export const navItems: string[] = ['Projects', 'Skills', 'Experience', 'About me', 'Contact'];
+interface NavItemsType{
+    name: string;
+    toId: string;
+}
+
+export const navItems: NavItemsType[] = [
+  { name: 'Projects', toId: 'projects' },
+  { name: 'Skills', toId: 'skills' },
+  { name: 'Experience', toId: 'experience' },
+  { name: 'About', toId: 'about' },
+  { name: 'Contact', toId: 'contact' }
+] 
  export interface Tech {
     name: string;
     icons: string;

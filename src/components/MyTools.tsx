@@ -15,25 +15,28 @@ let toolsIcons = [
 export const MyTools = () => {
   return (
     <>
-      <h2 className="text-xl font-honk text-center font-bold text-gray-700 dark:text-white mb-4">
-        My Tools
-      </h2>
-      <div className="w-full flex flex-wrap border  border-gray-300 dark:border-white/30 rounded-2xl  justify-center items-center gap-10 ">
-        {toolsIcons.map((tool, index) => (
-          <div
-            key={index}
-            className="group relative  inline-block p-4 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full justify-center items-center"
-          >
-            <img
-              src={tool.icon}
-              alt={tool.name}
-              className="w-8 h-8 hover:scale-110 transition-transform duration-200"
-            />
-            <span className="hidden absolute w-20 top-full  text-center group-hover:block bg-gray-800 text-white text-xs rounded ">
-              {tool.name}
-            </span>
-          </div>
-        ))}
+      <div>
+        <div className="w-[80%] mx-auto flex flex-col sm:flex-row border border-gray-300 dark:border-white/30 rounded-2xl justify-center items-center gap-6 sm:gap-10 p-2">
+          {toolsIcons.map((tool, index) => (
+            <div
+              key={index}
+              // Mudámos para 'flex' e adicionámos 'cursor-pointer' (visto que o rato já está bom!)
+              className="group relative flex p-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full justify-center items-center cursor-pointer transition-colors duration-200"
+            >
+              <img
+                src={tool.icon}
+                alt={tool.name}
+                // O hover:scale-110 funciona melhor se a transição estiver no estado inicial
+                className="w-8 h-8 transform hover:scale-110 transition-transform duration-200"
+              />
+
+              {/* TOOLTIP: Corrigido para aparecer centrado abaixo do ícone e com uma margem de topo (mt-2) */}
+              <span className="pointer-events-none hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 w-max max-w-28 text-center group-hover:block bg-gray-900 text-white text-xs py-1 px-2.5 rounded shadow-lg z-10 whitespace-nowrap">
+                {tool.name}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
