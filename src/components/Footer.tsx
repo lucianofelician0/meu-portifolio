@@ -1,4 +1,5 @@
 import { navItems } from "@/data";
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // import { fa} from '@fortawesome/free-solid-svg-icons';
@@ -14,22 +15,28 @@ const socialMedia = [
   {
     name: "facebook",
     icon: faFacebook,
+    link:"facebook.com/lucianohali3"
+  
   },
   {
     name: "github",
     icon: faGithub,
+    link:"www.github.com/lucianofeluciano "
   },
   {
     name: "instagram",
     icon: faInstagram,
+    link: "https://www.instagram.com/@lucianohali"
   },
   {
     name: "youtube",
     icon: faYoutube,
+    link: "https://youtube.com/@lucianohali"
   },
   {
     name: "linkedin",
     icon: faLinkedin,
+    link: "https://www.linkedin.com/in/lucianofeliciano"
   },
 ];
 
@@ -39,13 +46,16 @@ export const Footer = () => {
       <div className="flex items-center gap-8">
         {navItems.map((item, index) => {
           return (
-            <a
-              href="#"
+            <Link
+              smooth={true}
+              duration={500}
+              to={item.toId}
+              offset={-66}
               key={index}
-              className="font-medium text-gray-500  hover:text-black transition-all"
+              className="font-medium text-gray-500 cursor-pointer hover:text-black transition-all"
             >
               {item.name}
-            </a>
+            </Link>
           );
         })}
       </div>
@@ -53,7 +63,7 @@ export const Footer = () => {
         {socialMedia.map((item) => {
           return (
             <div key={item.name}>
-              <a target="_blank" href="#" >
+              <a target="_blank" href={item.link}>
                 <FontAwesomeIcon icon={item.icon} className="text-2xl" />
               </a>
             </div>

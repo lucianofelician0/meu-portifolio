@@ -1,12 +1,13 @@
 import { Titlies } from "@/components/ui/Titlies";
 import { navItems } from "@/data";
+// import {MyTools} from "@/components/MyTools";
 
 export default function AboutMe() {
 
  const [ , , , { name } ] = navItems
   return (
-    <section id="about" className="w-full md:w-[70%] mx-auto  ">
-      <div className="border rounded-lg border-gray-300 mb-5 ">
+    <section id="about" className="w-full sm:w-[80%] mx-auto  ">
+      <div className="border rounded-lg border-gray-300 mb-5 m-4">
         <div className=" p-4 md:p-8">
           <Titlies info={name} />
 
@@ -24,6 +25,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
+     
     </section>
   );
 }

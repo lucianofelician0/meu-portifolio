@@ -4,7 +4,7 @@ import AboutMe from "./components/section/AboutMe";
 import MySkills from "./components/section/MySkills";
 import { Experience } from "./components/section/Experiences";
 import { Footer } from "./components/Footer";
-import {ContactMe} from "./components/section/ContactMe";
+import { ContactMe } from "./components/section/ContactMe";
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
         <AboutMe />
         <MySkills />
         <Experience />
-         <ContactMe />
-         <hr className="border border-zinc-300 mt-4 shadow-md" />
+        <ContactMe />
+        <hr className="border border-zinc-300 mt-4 shadow-md" />
         <Footer />
       </main>
     </div>

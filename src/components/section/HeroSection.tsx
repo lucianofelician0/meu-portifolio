@@ -1,13 +1,14 @@
 import { Avatar } from "../ui/Avatar";
 import avatarImg from "@/assets/img/foto.jpg";
-import cvDonwload from "@/cv/D3cLuciano.pdf"
-// import { MyTools } from "@/components/MyTools";
+import cvDonwload from "@/cv/D3cLuciano.pdf";
+import { MyTools } from "@/components/MyTools";
+import { Download } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center ">
+    <section id="hero" className=" pt-28 md:min-h-screen md:mx-8   flex flex-col justify-center ">
       <div className="flex flex-col items-center justify-center">
-        <div >
+        <div>
           <Avatar img={avatarImg} />
         </div>
         <div className=" py-5 max-w-xl mx-auto">
@@ -16,8 +17,8 @@ export default function HeroSection() {
             Stack Developer with a love for creating beautiful and functional
             web experiences.
           </h1>
-          <div className=" flex justify-center   gap-4 mx-auto w-full ">
-            <button className=" bg-zinc-900 hover:bg-zinc-800 text-white px-6 py-2.5 rounded-sm text-sm transition cursor-pointer group">
+          <div className=" flex flex-col sm:flex-row justify-center sm:items-center gap-4 mx-auto w-full ">
+            <button className=" bg-zinc-900 mx-4 hover:bg-zinc-800  my-4 text-white p-6 py-2.5 rounded-sm text-sm transition cursor-pointer group">
               <div className="relative overflow-hidden">
                 <span className="block transition-transform duration-200 group-hover:-translate-y-full">
                   Explore Templates
@@ -27,15 +28,18 @@ export default function HeroSection() {
                 </span>
               </div>
             </button>
-            <a href={cvDonwload} download={"cv luciano"}>
-              <button className="border border-zinc-200 px-6 text-sm py-2.5 text-black rounded-sm hover:scale-105 transition duration-300 active:scale-100 cursor-pointer">
-                Get my CV
-              </button>
-            </a>
+
+            <button className="border  mx-4 border-zinc-200  text-sm py-2.5 p-6 text-black rounded-sm hover:scale-105 transition duration-300 active:scale-100 cursor-pointer">
+              <a href={cvDonwload} className="flex justify-center gap-4 items-center" download={"cv luciano"}>
+                <span>Get my CV</span> <Download size={20} />
+              </a>
+            </button>
           </div>
         </div>
       </div>
-      {/* <MyTools /> */}
+      <div className="hidden sm:block">
+        <MyTools />
+      </div>
     </section>
   );
 }
