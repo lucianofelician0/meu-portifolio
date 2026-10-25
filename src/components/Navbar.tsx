@@ -19,7 +19,7 @@ export const Navbar = () => {
             offset={-66}
             className="text-3xl font-honk font-bold cursor-pointer"
           >
-            Fluciano
+            Feluciano
             <span className="text-red-600 text-2xl font-extrabold">.</span>
           </ScroolLink>
         </div>
