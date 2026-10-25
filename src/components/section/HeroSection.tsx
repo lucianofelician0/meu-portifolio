@@ -1,6 +1,6 @@
 import { Avatar } from "../ui/Avatar";
 import avatarImg from "@/assets/img/foto.jpg";
-import cvDonwload from "@/cv/D3cLuciano.pdf";
+import cvDonwload from "@/cv/curriculo.pdf";
 import { MyTools } from "@/components/MyTools";
 import { Download } from 'lucide-react';
 
