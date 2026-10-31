@@ -49,4 +49,4 @@ Depois acesse `http://localhost:5173/admin` para cadastrar o conteúdo.
 ## Deploy
 
 - **Backend**: Render, Railway ou Fly.io — `npm run build` e `npm start` dentro de `server/`, com as variáveis do `.env.example` (`CLIENT_URL` = URL do site).
-- **Frontend**: Vercel ou Netlify — defina `VITE_API_URL` com a URL do backend (veja `.env.example`). O fallback de SPA para `/blog` e `/admin` já está configurado em `vercel.json` e `public/_redirects`.
+- **Frontend**: Vercel (projeto `meu-portifolio`, domínio www.feluciano.online, publica sozinho a cada push na `main`) ou Netlify — defina `VITE_API_URL` com a URL do backend (veja `.env.example`). O fallback de SPA para `/blog` e `/admin` já está configurado em `vercel.json` e `public/_redirects`.
