@@ -8,6 +8,11 @@ export const loginSchema = z.object({
   password: z.string().min(1),
 });
 
+export const changePasswordSchema = z.object({
+  currentPassword: z.string().min(1),
+  newPassword: z.string().min(10, "A nova senha precisa de pelo menos 10 caracteres"),
+});
+
 export const projectSchema = z.object({
   title: z.string().min(1),
   description: z.string().min(1),

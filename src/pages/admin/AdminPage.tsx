@@ -5,6 +5,7 @@ import { api, authToken } from "@/lib/api";
 import { formatDate, type Certification, type Post, type Project } from "@/lib/types";
 import { ResourceManager, type Field } from "./ResourceManager";
 import { VisitStatsPanel } from "./VisitStatsPanel";
+import { AccountPanel } from "./AccountPanel";
 
 const projectFields: Field[] = [
   { name: "title", label: "Título", type: "text", required: true },
@@ -44,7 +45,7 @@ const certificationFields: Field[] = [
   { name: "description", label: "Descrição", type: "textarea" },
 ];
 
-const tabs = ["Visitas", "Projetos", "Posts", "Certificações"] as const;
+const tabs = ["Visitas", "Projetos", "Posts", "Certificações", "Conta"] as const;
 
 export default function AdminPage() {
   const navigate = useNavigate();
@@ -92,6 +93,7 @@ export default function AdminPage() {
         </nav>
 
         {tab === "Visitas" && <VisitStatsPanel />}
+        {tab === "Conta" && <AccountPanel />}
         {tab === "Projetos" && (
           <ResourceManager<Project & Record<string, unknown>>
             endpoint="/projects"

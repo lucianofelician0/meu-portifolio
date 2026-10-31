@@ -13,11 +13,13 @@ export class HttpError extends Error {
   }
 }
 
-export const requireAuth: RequestHandler = (req, _res, next) => {
+// Valida o token e guarda o id do utilizador em res.locals.userId
+export const requireAuth: RequestHandler = (req, res, next) => {
   const token = req.headers.authorization?.replace(/^Bearer /, "");
   if (!token) throw new HttpError(401, "Não autenticado");
   try {
-    jwt.verify(token, config.jwtSecret);
+    const payload = jwt.verify(token, config.jwtSecret) as jwt.JwtPayload;
+    res.locals.userId = payload.sub;
   } catch {
     throw new HttpError(401, "Sessão expirada, faça login novamente");
   }

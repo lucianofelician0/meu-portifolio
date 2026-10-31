@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import { rateLimit } from "express-rate-limit";
 import { config } from "../config.js";
 import { User } from "../models.js";
-import { loginSchema } from "../schemas.js";
+import { changePasswordSchema, loginSchema } from "../schemas.js";
 import { HttpError, requireAuth, validate } from "../middleware.js";
 
 export const authRouter = Router();
@@ -24,4 +24,16 @@ authRouter.post("/login", loginLimiter, validate(loginSchema), async (req, res) 
 
 authRouter.get("/me", requireAuth, (_req, res) => {
   res.json({ ok: true });
+});
+
+// Exige a senha atual, para um token roubado não bastar para trocar a senha
+authRouter.put("/password", requireAuth, loginLimiter, validate(changePasswordSchema), async (req, res) => {
+  const { currentPassword, newPassword } = req.body;
+  const user = await User.findById(res.locals.userId);
+  if (!user || !(await bcrypt.compare(currentPassword, user.passwordHash))) {
+    throw new HttpError(401, "Senha atual incorreta");
+  }
+  user.passwordHash = await bcrypt.hash(newPassword, 12);
+  await user.save();
+  res.status(204).end();
 });
