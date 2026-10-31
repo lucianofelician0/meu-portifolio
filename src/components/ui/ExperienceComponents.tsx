@@ -11,7 +11,7 @@ export const ExperienceComponent = ({
   return (
     <div className=" dark:border-white/30 rounded-2xl pb-2 ">
       {/* Definicao do titulo do component */}
-      <h2 className="font-extrabold text-2xl sm:text-3xl text-center py-6 px-2">
+      <h2 className="font-extrabold font-poppins text-2xl sm:text-3xl text-center py-6 px-2">
         {experienceTitle}
       </h2>
       <div className="grid grid-cols-2 gap-2 px-3 sm:px-6">
