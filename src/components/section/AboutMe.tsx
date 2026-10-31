@@ -11,17 +11,17 @@ export default function AboutMe() {
         <div className=" p-4 md:p-8">
           <Titlies info={name} />
 
-          <p className="text-left mt-4 font-light text-lg p-4 ">
-            I’m a full-stack developer passionate about building
-            end-to-end digital experiences that are fast, scalable and
-            user-focused. With strong expertise in both front-end and back-end
-            technologies, I enjoy transforming ideas into fully functional web
-            applications that feel seamless and intuitive.
+          <p className="text-left mt-4 font-light text-base sm:text-lg p-2 sm:p-4">
+            Sou um desenvolvedor full stack apaixonado por construir
+            experiências digitais completas, rápidas, escaláveis e centradas no
+            utilizador. Com sólidos conhecimentos em tecnologias de front-end e
+            back-end, gosto de transformar ideias em aplicações web totalmente
+            funcionais, fluidas e intuitivas.
           </p>
-          <p className="text-left font-light text-lg p-4">
-            Whether it’s crafting responsive interfaces or developing robust
-            backend systems, I aim to deliver solutions that are both reliable
-            and impactful.
+          <p className="text-left font-light text-base sm:text-lg p-2 sm:p-4">
+            Seja a criar interfaces responsivas ou a desenvolver sistemas
+            back-end robustos, o meu objetivo é entregar soluções fiáveis e com
+            impacto real.
           </p>
         </div>
       </div>

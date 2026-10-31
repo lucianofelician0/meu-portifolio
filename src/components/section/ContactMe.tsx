@@ -30,30 +30,28 @@ export const ContactMe = () => {
         console.log("FALHA...", error);
         alert("Erro ao enviar: " + error.text);
       });
-
-    console.log("clicked!");
   };
 
   return (
     <>
-      <section id="contact" className="flex justify-center items-center">
-        <div className="sm:w-[80%] mx-4 sm:pt-6 mt-5 border rounded-lg border-gray-300 md:mx-auto px-4 ">
+      <section id="contact" className="flex justify-center items-center pt-8">
+        <div className="w-full sm:w-[80%] mx-4 sm:pt-6 mt-5 border rounded-lg border-gray-300 md:mx-auto px-4 ">
           <div className="pt-3">
-            <Titlies info="Contact Me" />
+            <Titlies info="Contacte-me" />
           </div>
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:p-8 my-4 gap-12 md:gap-20">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 md:p-8 my-4 gap-8 md:gap-12 lg:gap-20">
             {/* Left Side */}
             <div className="flex flex-col justify-start pt-1">
               <div className="">
                 <img
-                  className=" rounded-lg"
+                  className="rounded-lg w-full max-h-80 md:max-h-none object-cover"
                   src={contactImg}
-                  alt="foto de contacto"
+                  alt="Foto de contacto"
                 />
               </div>
-              <p className=" text-center font-light leading-relaxed py-5 max-w-[420]">
-                Have a question or need help? Reach out and I'll get back to you
-                as soon as possible.
+              <p className=" text-center font-light leading-relaxed py-5 max-w-[420px] mx-auto">
+                Tem alguma questão ou precisa de ajuda? Entre em contacto e
+                responderei o mais rápido possível.
               </p>
             </div>
 
@@ -67,7 +65,7 @@ export const ContactMe = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-2.5">
                   <label htmlFor="firstName" className="font-light text-sm">
-                    First Name
+                    Nome
                   </label>
                   <input
                     required
@@ -80,7 +78,7 @@ export const ContactMe = () => {
                 </div>
                 <div className="flex flex-col  gap-2.5">
                   <label htmlFor="lastName" className=" font-light text-sm">
-                    Last Name
+                    Apelido
                   </label>
                   <input
                     required
@@ -109,13 +107,13 @@ export const ContactMe = () => {
 
               <div className="flex flex-col gap-2.5">
                 <label htmlFor="message" className="font-light text-sm">
-                  Message
+                  Mensagem
                 </label>
                 <textarea
                   required
                   name="message"
                   id="message"
-                  placeholder="Hi, I'd like to know more about your services"
+                  placeholder="Olá, gostaria de saber mais sobre os seus serviços"
                   rows={6}
                   className="w-full px-3.5 py-3 rounded-sm bg-zinc-50 border border-zinc-300 text-zinc-600 placeholder:text-zinc-400 text-sm focus:outline-none focus:border-zinc-400 transition-colors resize-none"
                 ></textarea>
@@ -125,7 +123,7 @@ export const ContactMe = () => {
                 type="submit"
                 className="w-full mt-1 bg-black hover:bg-zinc-900 border border-zinc-300 text-white text-sm font-medium py-3 rounded-sm transition-colors cursor-pointer"
               >
-                Submit
+                Enviar
               </button>
             </form>
           </div>

@@ -15,18 +15,18 @@ const socialMedia = [
   {
     name: "facebook",
     icon: faFacebook,
-    link:"facebook.com/lucianohali3"
+    link: "https://www.facebook.com/lucianohali3"
   
   },
   {
     name: "github",
     icon: faGithub,
-    link:"www.github.com/lucianofeluciano "
+    link: "https://github.com/lucianofeluciano"
   },
   {
     name: "instagram",
     icon: faInstagram,
-    link: "https://www.instagram.com/@lucianohali"
+    link: "https://www.instagram.com/lucianohali"
   },
   {
     name: "youtube",
@@ -43,7 +43,7 @@ const socialMedia = [
 export const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-around w-full py-16 text-sm text-gray-800/70">
-      <div className="flex items-center gap-8">
+      <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 px-4">
         {navItems.map((item, index) => {
           return (
             <Link
@@ -63,16 +63,16 @@ export const Footer = () => {
         {socialMedia.map((item) => {
           return (
             <div key={item.name}>
-              <a target="_blank" href={item.link}>
+              <a target="_blank" rel="noreferrer" href={item.link} aria-label={item.name}>
                 <FontAwesomeIcon icon={item.icon} className="text-2xl" />
               </a>
             </div>
           );
         })}
       </div>
-      <p className="mt-8 text-center">
-        Copyright © {new Date().getFullYear()} <a href="#">Feluciano</a>. All
-        rights reservered.
+      <p className="mt-8 px-4 text-center">
+        Copyright © {new Date().getFullYear()} <a href="#">Feluciano</a>. Todos
+        os direitos reservados.
       </p>
     </footer>
   );

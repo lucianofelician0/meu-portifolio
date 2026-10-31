@@ -6,11 +6,13 @@ interface NavItemsType{
 }
 
 export const navItems: NavItemsType[] = [
-  { name: 'Projects', toId: 'projects' },
-  { name: 'Skills', toId: 'skills' },
-  { name: 'Experience', toId: 'experience' },
-  { name: 'About', toId: 'about' },
-  { name: 'Contact', toId: 'contact' }
+  { name: 'Projetos', toId: 'projects' },
+  { name: 'Competências', toId: 'skills' },
+  { name: 'Experiência', toId: 'experience' },
+  { name: 'Sobre', toId: 'about' },
+  { name: 'Certificados', toId: 'certifications' },
+  { name: 'Blog', toId: 'blog' },
+  { name: 'Contacto', toId: 'contact' }
 ] 
  export interface Tech {
     name: string;
@@ -37,7 +39,7 @@ export const experiences: ExperienceType = {
         { name: "MySql", icons: experienceIcon, level: "Intermédio" },
         { name: "Mongo Db", icons: experienceIcon, level: "Básico" },
         { name: "Next Js", icons: experienceIcon, level: "Básico" },
-        { name: "PostMans", icons: experienceIcon, level: "Básico" }
+        { name: "Postman", icons: experienceIcon, level: "Básico" }
     ]
 };
 

@@ -1,13 +1,24 @@
 
 
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Honk:MORF@15&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-honk: "Honk", cursive;
+}
+
+/* Estilos do painel admin */
+@layer components {
+  .input {
+    @apply w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-800;
+  }
+  .btn-primary {
+    @apply rounded-full bg-zinc-900 px-5 py-2 text-sm font-medium text-white cursor-pointer hover:bg-zinc-700 disabled:opacity-50;
+  }
+  .btn-secondary {
+    @apply rounded-full border border-zinc-300 px-3 py-2 text-sm cursor-pointer hover:bg-zinc-100;
+  }
 }

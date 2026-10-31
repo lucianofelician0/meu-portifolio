@@ -11,17 +11,17 @@ export const ExperienceComponent = ({
   return (
     <div className=" dark:border-white/30 rounded-2xl pb-2 ">
       {/* Definicao do titulo do component */}
-      <h2 className="font-honk font-bold text-3xl text-center py-6">
+      <h2 className="font-honk font-bold text-2xl sm:text-3xl text-center py-6 px-2">
         {experienceTitle}
       </h2>
-      <div className="grid grid-cols-2  place-items-center items-center pl-3 ">
+      <div className="grid grid-cols-2 gap-2 px-3 sm:px-6">
         {contents.map((content, index) => {
           return (
-            <div key={index} className="flex  items-start p-2 m-4 w-40">
-              <img src={content.icons} width={40} alt="icon" className="" />
-              <div>
-                <h3 className="font-bold ">{content.name}</h3>
-                <p className="font-light ">
+            <div key={index} className="flex items-start gap-2 p-2 min-w-0">
+              <img src={content.icons} width={32} alt="" className="shrink-0 sm:w-10" />
+              <div className="min-w-0">
+                <h3 className="font-bold text-sm sm:text-base wrap-break-word">{content.name}</h3>
+                <p className="font-light text-sm sm:text-base">
                   {content.level}
                 </p>
               </div>

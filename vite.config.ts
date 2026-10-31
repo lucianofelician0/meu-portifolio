@@ -10,4 +10,10 @@ export default defineConfig({
     tailwindcss(), 
     tsconfigPaths() // Este plugin resolve o @/ automaticamente lendo o tsconfig!
   ],
+  server: {
+    // Em desenvolvimento, encaminha /api para o backend (pasta server/)
+    proxy: {
+      '/api': 'http://localhost:4000',
+    },
+  },
 })

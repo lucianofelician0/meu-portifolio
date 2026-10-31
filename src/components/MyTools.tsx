@@ -16,7 +16,7 @@ export const MyTools = () => {
   return (
     <>
       <div>
-        <div className="w-[60%] mx-auto flex flex-col sm:flex-row border mt-4 border-gray-300 dark:border-white/30 rounded-2xl justify-center items-center gap-6 sm:gap-10 p-2">
+        <div className="w-fit max-w-[90%] mx-auto flex flex-wrap border mt-4 border-gray-300 dark:border-white/30 rounded-2xl justify-center items-center gap-6 md:gap-10 px-6 py-2">
           {toolsIcons.map((tool, index) => (
             <div
               key={index}

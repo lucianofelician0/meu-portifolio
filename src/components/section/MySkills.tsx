@@ -11,25 +11,25 @@ export default function MySkills() {
   {
     name: "Web design",
     icon: webIcon,
-    description: "Creation of modern, intuitive, and responsive layouts focused on your brand's visual identity and delivering the best digital experience for users.",
+    description: "Criação de layouts modernos, intuitivos e responsivos, focados na identidade visual da sua marca e na melhor experiência digital para os utilizadores.",
     link: "#",
   },
   {
-    name: "Mobile app",
+    name: "Aplicações móveis",
     icon: mobileIcon,
-    description: "Development of custom mobile applications for iOS and Android, featuring high performance, seamless fluidity, and tailored business functionalities.",
+    description: "Desenvolvimento de aplicações móveis personalizadas para iOS e Android, com alto desempenho, fluidez e funcionalidades à medida do seu negócio.",
     link: "#",
   },
   {
-    name: "UI/ UX design",
+    name: "Design UI/UX",
     icon: uiIcon,
-    description: "Designing user-friendly interfaces (UI) combined with user journey research (UX) to ensure your product is attractive, efficient, and intuitive.",
+    description: "Desenho de interfaces amigáveis (UI) aliado ao estudo da jornada do utilizador (UX), para que o seu produto seja atrativo, eficiente e intuitivo.",
     link: "#",
   },
   {
-    name: "Graphics design",
+    name: "Design gráfico",
     icon: graphicIcon,
-    description: "Creation of high-impact visual materials, such as logos, corporate identities, and digital assets that clearly communicate your business value.",
+    description: "Criação de materiais visuais de alto impacto, como logótipos, identidades corporativas e recursos digitais que comunicam com clareza o valor do seu negócio.",
     link: "#",
   },
 ];
@@ -38,11 +38,11 @@ export default function MySkills() {
     <section id="skills" className="w-full  md:w-[80%] mx-auto">
       <Titlies info={Skills.name} />
       <div className="  mt-3  mx-4">
-        <div className="grid  place-items-center sm:grid-cols-2 lg:grid-cols-4  gap-2 my-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 my-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="border min-h-75 rounded-lg border-gray-300 p-6 mx-1 dark:border-white/30  hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white"
+              className="border lg:min-h-75 rounded-lg border-gray-300 p-6 dark:border-white/30  hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white"
             >
               <img src={service.icon} alt="" className="w-10" />
               <h3 className="py-2 font-medium text-left">{service.name}</h3>
@@ -53,7 +53,7 @@ export default function MySkills() {
                 href={service.link}
                 className=" items-center gap-2 text-sm mt-5 hidden"
               >
-                Read more{" "}
+                Saber mais{" "}
                 <img src="./assets/right-arrow.png" alt="" className="w-4" />
               </a>
               <hr className="py-2" />
