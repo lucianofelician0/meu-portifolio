@@ -1,11 +1,25 @@
 import React from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, LogIn } from "lucide-react";
 import { Link as ScroolLink } from "react-scroll";
+import { Link } from "react-router";
 import { navItems } from "@/data";
 
 // Estilo dos links: "Projetos" fica em destaque. No menu móvel (fundo laranja) o texto é mais escuro para ser legível.
 const linkClass = (toId: string, mobile = false) =>
   `px-4 cursor-pointer py-1.5 rounded-full text-sm transition-colors ${toId === "projects" ? "bg-white border border-zinc-200 font-medium text-zinc-800 hover:text-zinc-600" : mobile ? "text-zinc-900 hover:text-zinc-700" : "text-zinc-500 hover:text-zinc-400"}`;
+
+// Ícone de entrar que leva ao painel admin
+const AdminLink = ({ onClick }: { onClick?: () => void }) => (
+  <Link
+    to="/admin"
+    onClick={onClick}
+    aria-label="Entrar no painel"
+    title="Entrar no painel"
+    className="size-11 shrink-0 rounded-full bg-white border border-zinc-200 flex items-center justify-center text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors"
+  >
+    <LogIn size={18} strokeWidth={2.25} />
+  </Link>
+);
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -44,19 +58,22 @@ export const Navbar = () => {
             </ScroolLink>
           ))}
         </div>
-        {/* BUTAO GET IN TOUCH */}
-        <ScroolLink
-          to={getInTouch}
-          smooth={true}
-          duration={500}
-          offset={-66}
-          className="hidden lg:inline-flex items-center gap-2.5 bg-linear-to-r from-zinc-950 to-zinc-500 text-zinc-50 hover:text-zinc-200 text-sm font-medium pl-5 pr-2 py-2 rounded-full cursor-pointer border-0"
-        >
-          Fale comigo
-          <span className="size-7 rounded-full bg-white flex items-center justify-center">
-            <ArrowRight size={14} className="text-zinc-700" strokeWidth={2.5} />
-          </span>
-        </ScroolLink>
+        {/* BUTAO GET IN TOUCH + ENTRAR */}
+        <div className="hidden lg:flex items-center gap-3">
+          <ScroolLink
+            to={getInTouch}
+            smooth={true}
+            duration={500}
+            offset={-66}
+            className="inline-flex items-center gap-2.5 bg-linear-to-r from-zinc-950 to-zinc-500 text-zinc-50 hover:text-zinc-200 text-sm font-medium pl-5 pr-2 py-2 rounded-full cursor-pointer border-0"
+          >
+            Fale comigo
+            <span className="size-7 rounded-full bg-white flex items-center justify-center">
+              <ArrowRight size={14} className="text-zinc-700" strokeWidth={2.5} />
+            </span>
+          </ScroolLink>
+          <AdminLink />
+        </div>
         {/* FIM BUTAO GET IN TOUCH  */}
 
         {/* ICON MENU PARA DISPLAY MOBILE */}
@@ -99,6 +116,9 @@ export const Navbar = () => {
                 <ArrowRight size={14} className="text-zinc-700" strokeWidth={2.5} />
               </span>
             </ScroolLink>
+            <div className="flex justify-center mt-3">
+              <AdminLink onClick={closeMenu} />
+            </div>
           </div>
         )}
 
