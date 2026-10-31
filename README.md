@@ -48,5 +48,5 @@ Depois acesse `http://localhost:5173/admin` para cadastrar o conteúdo.
 
 ## Deploy
 
-- **Backend**: Render, Railway ou Fly.io — `npm run build` e `npm start` dentro de `server/`, com as variáveis do `.env.example` (`CLIENT_URL` = URL do site).
+- **Backend**: Vercel (projeto `feluciano-api`). Para publicar: `npm run deploy` dentro de `server/`. Faz o build localmente e envia o resultado; o build remoto da Vercel devolve 404 nesta API. As variáveis estão no `.env.example` (`CLIENT_URL` = URLs do site, separadas por vírgula).
 - **Frontend**: Vercel (projeto `meu-portifolio`, domínio www.feluciano.online, publica sozinho a cada push na `main`) ou Netlify — defina `VITE_API_URL` com a URL do backend (veja `.env.example`). O fallback de SPA para `/blog` e `/admin` já está configurado em `vercel.json` e `public/_redirects`.
