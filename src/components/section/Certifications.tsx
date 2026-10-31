@@ -27,7 +27,7 @@ export const Certifications = () => {
             if (list.length === 0) return null;
             return (
               <div key={kind} className="border rounded-lg border-gray-300 p-6">
-                <h2 className="font-honk font-bold text-3xl text-center pb-4">{title}</h2>
+                <h2 className="font-bold text-3xl text-center pb-4">{title}</h2>
                 <ul className="space-y-5">
                   {list.map((item) => (
                     <li key={item._id} className="flex gap-3">

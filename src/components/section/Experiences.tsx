@@ -3,7 +3,7 @@ import { ExperienceComponent } from "@/components/ui/ExperienceComponents";
 import { Titlies } from "../ui/Titlies";
 
 const { frontEnd, backEnd } = experiences;
-const titles: string[] = ["Desenvolvimento Frontend", "Desenvolvimento Backend"];
+const titles: string[] = [" Frontend", " Backend"];
 
 export const Experience = () => {
   const [front, back] = titles;
